@@ -73,9 +73,8 @@ var alki = {
 
 //output number of cookies per hour to make in a list 
 //get the parent and make a new element with content and append to page
-pike.renderToPage = fucntion90 {
+pike.renderToPage = fucntion() {
 console.log('output to page' )
-}
 
 
 var pikeList = document.getElementById('pike');
@@ -86,3 +85,4 @@ cookieList.textContent = 'cookies to make per hour';
 
 pikeList.appendChild(cookieList);
 
+}
