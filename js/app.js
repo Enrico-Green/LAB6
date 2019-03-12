@@ -9,11 +9,11 @@
 
 
 //this function generates a random number of customers
-function getRandomIntCustomers (min,max){
+function getRandomIntCustomers(min, max){
     min = Math.ceil(min);
     max = Math.floor(max);
     return getRandomIntCustomers(Math.random() * (max - min +1)) + min; 
-};
+}
 
 
 /* KEYS
