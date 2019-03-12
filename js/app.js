@@ -12,8 +12,8 @@
 function getRandomIntCustomers (min,max){
     min = Math.ceil(min);
     max = Math.floor(max);
-    return getRandomIntCustomers(Math.random() * (max - min +1)) +min; 
-}
+    return getRandomIntCustomers(Math.random() * (max - min +1)) + min; 
+};
 
 
 /* KEYS
@@ -73,8 +73,9 @@ var alki = {
 
 //output number of cookies per hour to make in a list 
 //get the parent and make a new element with content and append to page
-pike.renderToPage = fucntion() {
-console.log('output to page' )
+pike.renderToPage = fucntion() 
+{
+console.log('output to page' );
 
 
 var pikeList = document.getElementById('pike');
@@ -89,20 +90,19 @@ for (var i = 0; i < this.cookiesPerHour.length; i++) {
     var cookiesPikeList = document.createElement ('li');
     var pikeCookies = this.cookiesPerHourArray[i];
     cookiesPikeList.textContent = 'If ${i + 1} , customers per Hour: ${customersHour} ';
+    pikeList.appendChild(new_Li);
+    }
 
-    pikeList.appendChild(new_Li)
-} 
-
-}  ;
+};
 
 pike.calculateCookiesPerHour = function () {
 for(var i = 0; i < 7; i++) {
- var randomCustomersPerHour = getRandomIntCustomers(this.min, this.max)
+ var randomCustomersPerHour = getRandomIntCustomers(this.min, this.max);
  var cookiesNeededForCustomer = randomCustomersPerHour * this.avg;
- this.cookiesPerHourArray.push(cookiesNeededForCustomer)
+ this.cookiesPerHourArray.push(cookiesNeededForCustomer);
 }
 
-}
+};
 
 pike.calculateCookiesPerHour();
 pike.renderToPage();
