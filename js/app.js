@@ -85,11 +85,11 @@ cookieList.textContent = 'cookies to make per hour';
 
 pikeList.appendChild(cookieList);
 
-for (var i = 0; i < this.cookiesPerHour.length; i++) {
-    var cookiesPikeList = document.createElement ('li');
+for (var i = 0; i < this.cookiesPerHourArray.length; i++) {
+    var newPikeList = document.createElement ('li');
     var pikeCookies = this.cookiesPerHourArray[i];
     cookiesPikeList.textContent = 'If ${i + 1} , customers per Hour: ${customersHour} ';
-    pikeList.appendChild(new_Li);
+    pikeList.appendChild(newPikeList);
     }
 
 };
