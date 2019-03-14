@@ -1,0 +1,18 @@
+
+table,th{
+    margin-top: 100px;
+    margin-bottom: 1oopx;
+    border: 2px solid black; 
+}
+table,th,tr,td{
+   padding: 5px 
+}
+
+label{
+    display: block;
+}
+
+input[type=text]{ 
+    padding: 20px
+
+}
