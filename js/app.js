@@ -26,7 +26,7 @@ newStore.render();
 
 cookieStores.push(newStore);
 renderTable();
-
+ 
 }
 
 cookieStoreTable.addEventListener('submit', inputNewStore);
@@ -122,24 +122,55 @@ var tableElement = document.getElementById('cookieStores')
 //header
 
 function makeHeaderRow () {
-    var headerTR = documment.createElement('tr')
-    var footerTD = document.createElement('td')
+    var headerTR = document.createElement('tr');
+    var headerTD = document.createElement('td');
     headerTD.textContent = 'Store Name';
     headerTR.appendChild(headerTD);
     for(var n = 0; n < HoursOpen.length; n++) {
+        var makeNewHeaderTD = document.createElement('td')
+        makeNewHeaderTD.textContent = HoursOpen[n]
+        headerTR.appendChild(makeNewHeaderTD);
     }
 
+    var totalTD = document.createElement('td')
+    totalTD.textContent = 'Total';
+    headerTR.appendChild(totalTD);
+    tableElement.appendChild(headerTR);
 }
 
+//cookie data to fill in the table 
+SalmonCookies.prototype.addData = function(newTR, location, totalCookies){
+    var titleTD = document.createElement('td');
+    titleTD.textContent = location;
+    newTR.appendChild(title_td);
+  
+    for(var p = 0; p < this.hoursOfOperation.length; p++){
+      var newTD = document.createElement('td');
+      newTD.textContent = this.avgSalesPerHour[p];
+      nextTR.appendChild(newTD);
+    }
+  
+    var totalCookies = document.createElement('td');
+    totalCookies.textContent = totalCookieSales;
+    newTR.appendChild(totalCookies);
+  };
 
+  SalmonCookies.prototype.addRow = function() {
+    var location = this.location;
+    var totalCookies = this.totalSales();
+    var next_tr = document.createElement('tr');
+    this.addData(newTR, location, totalCookies);
+    tableEl.appendChild(next_tr);
+  };
 
 //footer
-function buildFooter() {
+function makeFooterRow() {
 var footerTR = document.createElement('tr');
 var footerTD = document.createElement('td');
 footerTD.textContent = 'Total';
 footerTR.appendChild(footerTD);
 for(var l =0; l < HoursOpen.length; l++){
-
+    }
 }
-}
+makeHeaderRow();
+makeFooterRow();
