@@ -59,16 +59,72 @@ function SalmonCookies (location, min, max, avgCookies, hours, numCustomers, avg
 SalmonCookies.prototype.numCustomers = function () {
  var randomCustomers = getRandomIntInclusive(this.minCustomers, this.maxCustomers);
  console.log('random number is: ' + randomCustomers);
- 
- retrun randomCustomers;
 
+    retrun randomCustomers;
 };
 
 //calculate avg sales per hour
 SalmonCookies.prototype.avgSales = function (index) {
-    var avgSalesPerHour = Math.floor(this.avgSalesPerHour *   )):  
-    console.log('random number is: ' + randomCustomers);
+    var avgSalesPerHourPerCustomer = Math.floor(this.avgCookiesPerCustomer * this.numCustomersArray[index]);  
     
-    retrun randomCustomers;
+    retrun avgSalesPerHourPerCustomer;
 };
 
+//total the cookie sales
+SalmonCookies.prototype.totalCookieSales = function(){
+    var totalCookieSales = 0;
+    for(var k = 0; k < this.avgSalesPerHour.length; k++){
+        totalCookies = totalCookies + this.avgSalesPerHour[k];
+    }
+    return totalCookieSales;
+};
+
+SalmonCookies.prototype.listCookies = function(){
+    console.log('${this.location} Results');
+    for(var i = 0; i < this.HoursOpen.length; i++){
+        this.numCustomersArray.push(this.numCustomers());
+        this.avgSalesPerHour.push(this.avgSales(i));
+
+        console.log('${this.hoursOpen[i]}: ${this.avgSalesPerHour} cookies');
+    }
+        console.log('Total Cookies: ${this.totalCookieSales()}');
+};
+
+//this will create the table
+/*
+<table>
+<tr>
+<th> 6am <th>
+<th> 7am <th>
+<th> 8am <th>
+<th> 9am <th>
+<th> 10am <th>
+<th> 11am <th>
+<th> 12pm <th>
+<th> 1pm <th>
+<th> 2pm <th>
+<th> 3pm <th>
+<th> 4pm <th>
+<th> 5pm <th>
+<th> 6pm <th>
+<th> 7pm <th>
+<th> 8pm<th>
+
+<th>
+store locations 
+<th>
+</table> 
+ 
+*/
+
+
+
+//footer
+function buildFooter() {
+var footerTR = document.createElement('tr');
+var footerTD = document.createElement('td');
+footerTD.textContent = 'Total';
+footerTR.appendChild(footerTD);
+for(var l =0; l < HoursOpen.length; l++){
+
+}
