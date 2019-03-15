@@ -158,10 +158,26 @@ SalmonCookies.prototype.addData = function(newTR, location, totalCookies){
   SalmonCookies.prototype.addRow = function() {
     var location = this.location;
     var totalCookies = this.totalSales();
-    var next_tr = document.createElement('tr');
+    var newTR = document.createElement('tr');
     this.addData(newTR, location, totalCookies);
-    tableEl.appendChild(next_tr);
+    tableElement.appendChild(newTR);
   };
+
+
+  ///determine hours
+   var cookiesByHourArray = [];
+
+   function totalPerHour () {
+for (var q = 0; q < hoursOfOperation.length; q++) {
+    var sum = 0;
+    for (var i in cookieStores) {
+     sum = sum + cookieStores[i].avgSalesPerHour[q]  
+    }
+     cookiesByHourArray.push(sum);
+    
+}
+
+   }
 
 //footer
 function makeFooterRow() {
@@ -172,5 +188,8 @@ footerTR.appendChild(footerTD);
 for(var l =0; l < HoursOpen.length; l++){
     }
 }
+
+
+
 makeHeaderRow();
 makeFooterRow();
