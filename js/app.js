@@ -29,7 +29,7 @@ renderTable();
 
 }
 
-cookieStoreTable.addEventListener('submit', makeNewStore);
+cookieStoreTable.addEventListener('submit', inputNewStore);
  
 //creates random number 
 //taken from MDN http://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
@@ -60,14 +60,14 @@ SalmonCookies.prototype.numCustomers = function () {
  var randomCustomers = getRandomIntInclusive(this.minCustomers, this.maxCustomers);
  console.log('random number is: ' + randomCustomers);
 
-    retrun randomCustomers;
+    return randomCustomers;
 };
 
 //calculate avg sales per hour
 SalmonCookies.prototype.avgSales = function (index) {
     var avgSalesPerHourPerCustomer = Math.floor(this.avgCookiesPerCustomer * this.numCustomersArray[index]);  
     
-    retrun avgSalesPerHourPerCustomer;
+    return avgSalesPerHourPerCustomer;
 };
 
 //total the cookie sales
@@ -111,11 +111,25 @@ SalmonCookies.prototype.listCookies = function(){
 <th> 8pm<th>
 
 <th>
-store locations 
+store locations
 <th>
 </table> 
  
 */
+
+var tableElement = document.getElementById('cookieStores')
+
+//header
+
+function makeHeaderRow () {
+    var headerTR = documment.createElement('tr')
+    var footerTD = document.createElement('td')
+    headerTD.textContent = 'Store Name';
+    headerTR.appendChild(headerTD);
+    for(var n = 0; n < HoursOpen.length; n++) {
+    }
+
+}
 
 
 
@@ -127,4 +141,5 @@ footerTD.textContent = 'Total';
 footerTR.appendChild(footerTD);
 for(var l =0; l < HoursOpen.length; l++){
 
+}
 }
