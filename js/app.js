@@ -199,23 +199,23 @@ for(var l =0; l < HoursOpen.length; l++){
 //store data / information
 
 //1st and pike location
-var pike = new SalmonCookies ('1st & Pike', 23,65,6.3, hoursOfOperation, [], []);
+var pike = new SalmonCookies ('1st & Pike', 23,65,6.3, HoursOpen, [], []);
     cookieStoresArray.push(pike);
 
 //SeaTac Airport location
-    var pike = new SalmonCookies ('SeaTac', 23,65,6.3, hoursOfOperation, [], []);
+    var pike = new SalmonCookies ('SeaTac', 23,65,6.3, HoursOpen, [], []);
     cookieStoresArray.push(pike);
 
 //SeattleCenter location
-    var pike = new SalmonCookies ('Seattle Center', 23,65,6.3, hoursOfOperation, [], []);
+    var pike = new SalmonCookies ('Seattle Center', 23,65,6.3, HoursOpen, [], []);
     cookieStoresArray.push(pike);
 
 //Capitol hill location
-    var pike = new SalmonCookies ('Capitol Hill', 23,65,6.3, hoursOfOperation, [], []);
+    var pike = new SalmonCookies ('Capitol Hill', 23,65,6.3, HoursOpen, [], []);
     cookieStoresArray.push(pike);
 
 //Alki beach location
-    var pike = new SalmonCookies ('Alki Beach', 23,65,6.3, hoursOfOperation, [], []);
+    var pike = new SalmonCookies ('Alki Beach', 23,65,6.3, HoursOpen, [], []);
     cookieStoresArray.push(pike);
 
 
