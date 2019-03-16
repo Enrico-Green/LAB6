@@ -199,27 +199,39 @@ for(var l =0; l < HoursOpen.length; l++){
 //store data / information
 
 //1st and pike location
-var pike = new SalmonCookies ('1st & Pike', 23,65,6.3, HoursOpen, [], []);
+var pike = new SalmonCookies ('1st & Pike', 23, 65, 6.3, HoursOpen, [], []);
     cookieStoresArray.push(pike);
 
 //SeaTac Airport location
-    var pike = new SalmonCookies ('SeaTac', 23,65,6.3, HoursOpen, [], []);
-    cookieStoresArray.push(pike);
+    var pike = new SalmonCookies ('SeaTac', 3, 24, 1.2, HoursOpen, [], []);
+    cookieStoresArray.push(seatac);
 
-//SeattleCenter location
-    var pike = new SalmonCookies ('Seattle Center', 23,65,6.3, HoursOpen, [], []);
-    cookieStoresArray.push(pike);
+//Seattle Center location
+    var pike = new SalmonCookies ('Seattle Center', 11, 38, 3.7, HoursOpen, [], []);
+    cookieStoresArray.push(seacent);
 
-//Capitol hill location
-    var pike = new SalmonCookies ('Capitol Hill', 23,65,6.3, HoursOpen, [], []);
-    cookieStoresArray.push(pike);
+//Capitol Hill location
+    var pike = new SalmonCookies ('Capitol Hill', 20, 38, 2.3, HoursOpen, [], []);
+    cookieStoresArray.push(caphill);
 
-//Alki beach location
-    var pike = new SalmonCookies ('Alki Beach', 23,65,6.3, HoursOpen, [], []);
-    cookieStoresArray.push(pike);
+//Alki Beach location
+    var pike = new SalmonCookies ('Alki Beach', 23, 65, 6.3, HoursOpen, [], []);
+    cookieStoresArray.push(alki);
 
+
+for(var i in cookieStoresArray){
+    cookieStoresArray[i].listCookies(); 
+
+}
 
 //table 
 
+totalPerHour(); 
+var cookieDayTotal = pike.totalCookieSales() + seatac.totalCookieSales() + seacent.totalCookieSales() + caphill.totalCookieSales() + alki.totalCookieSales();
+
 makeHeaderRow();
+
+for(var m = 0; m < cookieStoresArray.length; m++) {
+    cookieStoresArray[m].addRow();
+}
 makeFooterRow();
